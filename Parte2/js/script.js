@@ -13,6 +13,19 @@
         Realiza todo lo anterior al hacer click en el botón. 
         */
 
+        let convertir = document.getElementById("btn_mayusculas")
+
+        convertir.addEventListener("click",convertirAMinusculas)
+        
+        function convertirAMinusculas(event)
+        {
+            event.preventDefault()
+            let recuperarTexto = document.getElementById("txt_may").value;
+            let lowercase= recuperarTexto.toLowerCase();
+            document.getElementById("txt_may").value = lowercase;
+        }
+
+
 
       /*
         Crea una funcion llamada "calculateDogAge" que: 
@@ -25,6 +38,18 @@
            Deberás convertir el string a Entero. 
     
     */
+
+        let boton_convertir = document.getElementById("btn_añoshumano")
+
+        boton_convertir.addEventListener("click",calculateDogAge)
+        
+        function calculateDogAge(event)
+        {
+            event.preventDefault()
+            let recuperarNumero = document.getElementById("edad_humano").value;
+            recuperarNumero = recuperarNumero*7;
+            document.getElementById("edad_perro").value = recuperarNumero;
+        }
 
 
 
@@ -45,3 +70,33 @@
        Registra un evento de "click", para que cuando se de click en el botón, se muestren las propiedades de cada objeto en el input correspondiente. 
 
      */
+
+       function pokemon(nombre,especie, ataque, defensa)
+       {
+          this.nombre=nombre
+          this.especie= especie
+          this.ataque= ataque
+          this.defensa=defensa
+       }
+
+       let pokemon1 = new pokemon("Pikachu", "Electrico", 100, 70)
+       let pokemon2 = new pokemon("Charmander", "Fuego", 90, 75)
+
+       let boton_mostrar = document.getElementById("btn_muestra")
+
+       boton_mostrar.addEventListener("click",muestra_Pokemons)
+
+       function muestra_Pokemons(event)
+       {
+            event.preventDefault()
+            document.getElementById("nombre_poke1").value=pokemon1.nombre;
+            document.getElementById("especie_poke1").value=pokemon1.especie;
+            document.getElementById("ataque_poke1").value=pokemon1.ataque;
+            document.getElementById("defensa_poke1").value=pokemon1.defensa;
+
+            document.getElementById("nombre_poke2").value=pokemon2.nombre;
+            document.getElementById("especie_poke2").value=pokemon2.especie;
+            document.getElementById("ataque_poke2").value=pokemon2.ataque;
+            document.getElementById("defensa_poke2").value=pokemon2.defensa;
+       }
+        

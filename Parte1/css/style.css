@@ -1,1 +1,38 @@
- 
+*
+{
+    background-color: aquamarine;
+    list-style: none;
+}
+
+.titles
+{
+    text-align: center;
+}
+
+#elon_image
+{
+    width: 20%;
+    border: 5px double #1B2631;
+}
+
+#quote
+{
+    font-size: 15px;
+}
+
+footer
+{
+    margin-top: 50px;
+}
+
+.paragraphs
+{
+    display: flex;
+    flex-flow: column-reverse wrap;
+}
+
+.pie
+{
+    display: flex;
+    justify-content: flex-end;
+}
